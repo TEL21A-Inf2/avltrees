@@ -3,8 +3,13 @@ package element
 // Erwartet ein Wurzelelement und führt eine einfache Linksrotation damit aus.
 // Liefert die neue Wurzel zurück.
 func RotateLeft(element *Element) *Element {
-	// TODO
-	return nil
+	A := element
+	B := element.right
+	C := B.left
+
+	A.right = C
+	B.left = A
+	return B
 }
 
 // Erwartet ein Wurzelelement und führt eine einfache Rechtsrotation damit aus.

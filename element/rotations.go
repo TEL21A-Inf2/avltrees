@@ -38,8 +38,12 @@ func RotateLeftRight(element *Element) *Element {
 // Erwartet ein Wurzelelement und führt eine Rechts-Links-Rotation damit aus.
 // Liefert die neue Wurzel zurück.
 func RotateRightLeft(element *Element) *Element {
-	// TODO
-	return nil
+	A := element
+	B := element.right
+
+	A.right = RotateRight(B)
+	A = RotateLeft(A)
+	return A
 }
 
 // Berechnet den Balancefaktor des Knotens.

@@ -15,8 +15,13 @@ func RotateLeft(element *Element) *Element {
 // Erwartet ein Wurzelelement und führt eine einfache Rechtsrotation damit aus.
 // Liefert die neue Wurzel zurück.
 func RotateRight(element *Element) *Element {
-	// TODO
-	return nil
+	A := element
+	B := A.left
+	C := B.right
+
+	A.left = C
+	B.right = A
+	return B
 }
 
 // Erwartet ein Wurzelelement und führt eine Links-Rechts-Rotation damit aus.

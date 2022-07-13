@@ -38,7 +38,7 @@ func ExampleRotateRight() {
 	// 23 --> 42
 }
 
-func ExampleRotateLeftRight() {
+func ExampleRotateRightLeft() {
 	t1 := NewElement()
 	t1.Add(42)
 	t1.Add(23)
@@ -47,7 +47,7 @@ func ExampleRotateLeftRight() {
 	t1.Add(65)
 
 	fmt.Println(t1.AllMermaidEdges(""))
-	t1 = RotateLeftRight(t1)
+	t1 = RotateRightLeft(t1)
 	fmt.Println(t1.AllMermaidEdges(""))
 
 	// Output:
@@ -62,7 +62,7 @@ func ExampleRotateLeftRight() {
 	// 77 --> 65
 }
 
-func ExampleRotateRightLeft() {
+func ExampleRotateLeftRight() {
 	t1 := NewElement()
 	t1.Add(42)
 	t1.Add(23)
@@ -71,7 +71,7 @@ func ExampleRotateRightLeft() {
 	t1.Add(25)
 
 	fmt.Println(t1.AllMermaidEdges(""))
-	t1 = RotateRightLeft(t1)
+	t1 = RotateLeftRight(t1)
 	fmt.Println(t1.AllMermaidEdges(""))
 
 	// Output:
